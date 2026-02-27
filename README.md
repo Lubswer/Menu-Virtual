@@ -1,219 +1,188 @@
-# PROYECTO: Menú Digital
+# 🍽️ Menú Digital
+
+> Sistema de menú digital con pre-órdenes mediante QR para restaurantes y cafeterías independientes.
 
 ---
 
-## 1. Contexto del Proyecto
+## 📋 Tabla de Contenidos
 
-### Descripción breve del entorno donde surge la idea
+- [Contexto del Proyecto](#-contexto-del-proyecto)
+- [Usuario Objetivo](#-usuario-objetivo)
+- [Problema Principal](#-problema-principal)
+- [Objetivo del Producto](#-objetivo-del-producto)
+- [Alcance del MVP](#-alcance-del-mvp-versión-inicial)
+- [Exclusiones](#-exclusiones-fuera-del-alcance)
+- [Flujo General del Sistema](#-flujo-general-del-sistema)
+- [Casos Excepcionales y Decisiones de Diseño](#-casos-excepcionales-y-decisiones-de-diseño)
+- [Riesgos Técnicos Iniciales](#%EF%B8%8F-riesgos-técnicos-iniciales)
+- [Posibles Expansiones Futuras](#-posibles-expansiones-futuras)
 
-### ¿Qué problema observé?
+---
+
+## 📌 Contexto del Proyecto
+
+**¿Qué problema observé?**
 Los restaurantes pequeños y medianos enfrentan dificultades para actualizar su menú de forma rápida cuando cambian precios o disponibilidad, lo que genera confusión en clientes y retrasos en el proceso de pedido.
 
-### ¿En qué tipo de negocio ocurre?
+**¿En qué tipo de negocio ocurre?**
 Restaurantes pequeños independientes y cafeterías modernas con entre 10 y 20 mesas, que no cuentan con aplicación propia ni sistemas digitales avanzados.
 
-### ¿Por qué vale la pena resolverlo?
-Porque la falta de actualización inmediata del menú y la indecisión en caja generan filas, pérdida de tiempo y desorganización operativa. Una solución digital simple puede reducir tiempos de decisión y mejorar la experiencia tanto del cliente como del personal.
+**¿Por qué vale la pena resolverlo?**
+La falta de actualización inmediata del menú y la indecisión en caja generan filas, pérdida de tiempo y desorganización operativa. Una solución digital simple puede reducir tiempos de decisión y mejorar la experiencia tanto del cliente como del personal.
 
 ---
 
-## 2. Usuario Objetivo
+## 👤 Usuario Objetivo
 
-### Tipo de negocio
-Restaurantes o cafeterías independientes con entre 10 y 20 mesas, sin aplicación propia y sin sistema digital de pedidos implementado.
+| Característica | Descripción |
+|---|---|
+| **Tipo de negocio** | Restaurantes o cafeterías independientes con entre 10 y 20 mesas, sin aplicación propia y sin sistema digital de pedidos implementado |
+| **Nivel tecnológico** | Bajo o medio nivel de digitalización; utilizan menú físico impreso y gestionan pedidos de forma manual |
+| **Capacidad económica** | Presupuesto limitado; no desean pagar mensualidades elevadas ni implementar sistemas complejos |
 
-### Nivel tecnológico actual
-No necesariamente debe haber incursionado directamente al ámbito tecnológico.  
-Negocios con bajo o medio nivel de digitalización, que actualmente utilizan menú físico impreso y gestionan pedidos de forma manual.
-
-### Capacidad económica aproximada
-Negocios con presupuesto limitado que no desean pagar mensualidades elevadas ni implementar sistemas complejos que requieran capacitación extensa.
-
-### Lo que NO es mi usuario
+**❌ Lo que NO es mi usuario:**
 - Cadenas grandes con sistemas POS y aplicaciones propias ya integradas.
 - Negocios informales o puestos temporales que no requieren digitalización del menú.
 - Negocios que no pertenecen al sector alimenticio.
 
 ---
 
-## 3. Problema Principal
+## 🚨 Problema Principal
 
-El restaurante enfrenta retrasos en el proceso de atención en caja debido a la indecisión de los clientes y a la falta de actualización inmediata del menú, lo que genera filas y desorganización operativa.
-
----
-
-## 4. Objetivo del Producto
-
-El sistema permitirá a los clientes visualizar el menú actualizado y generar una pre-orden antes de llegar a caja, con el fin de reducir el tiempo de atención y optimizar el flujo de clientes.
+> El restaurante enfrenta retrasos en el proceso de atención en caja debido a la indecisión de los clientes y a la falta de actualización inmediata del menú, lo que genera filas y desorganización operativa.
 
 ---
 
-## 5. Alcance del MVP (Versión Inicial)
+## 🎯 Objetivo del Producto
 
-- Visualización de menú digital accesible mediante código QR.
-- Panel básico de administración para actualizar platos, precios y disponibilidad.
-- Opción para marcar productos como “agotados” en tiempo real.
-- Generación de pre-orden por parte del cliente.
-- Creación automática de código único para cada orden generada.
-- Interfaz de búsqueda en caja mediante código de orden.
-- Visualización de información básica del producto (nombre, precio, descripción breve e imagen opcional).
+> El sistema permitirá a los clientes visualizar el menú actualizado y generar una pre-orden antes de llegar a caja, con el fin de **reducir el tiempo de atención** y **optimizar el flujo de clientes**.
 
 ---
 
-## 6. Exclusiones (Fuera del Alcance)
+## ✅ Alcance del MVP (Versión Inicial)
 
-- No incluye sistema completo de inventario.
-- No incluye pagos online en la primera versión.
-- No reemplaza el sistema POS del negocio.
-- No incluye integración contable.
-
----
-
-## 7. Flujo General del Sistema
-
-1. Cliente escanea QR.  
-2. Visualiza menú.  
-3. Genera pre-orden.  
-4. El sistema genera un código único de orden.  
-5. Cliente va a caja.  
-6. Caja valida orden.  
-7. Se realiza pago.  
-8. Orden cambia a estado confirmada.  
-9. Internamente el stock de productos baja una vez confirmada la orden.
+- [ ] Visualización de menú digital accesible mediante código QR
+- [ ] Panel básico de administración para actualizar platos, precios y disponibilidad
+- [ ] Opción para marcar productos como **"agotados"** en tiempo real
+- [ ] Generación de pre-orden por parte del cliente
+- [ ] Creación automática de código único para cada orden generada
+- [ ] Interfaz de búsqueda en caja mediante código de orden
+- [ ] Visualización de información básica del producto (nombre, precio, descripción breve e imagen opcional)
 
 ---
 
-## 8. Casos Excepcionales y Decisiones de Diseño
+## 🚫 Exclusiones (Fuera del Alcance)
 
-### Cliente genera orden y no realiza el pago
+- No incluye sistema completo de inventario
+- No incluye pagos online en la primera versión
+- No reemplaza el sistema POS del negocio
+- No incluye integración contable
 
-**Problema:**  
-Un cliente genera una pre-orden pero no se presenta en caja para pagarla.
+---
+
+## 🔄 Flujo General del Sistema
+
+```
+Cliente escanea QR
+        ↓
+  Visualiza menú
+        ↓
+  Genera pre-orden
+        ↓
+Sistema genera código único de orden
+        ↓
+   Cliente va a caja
+        ↓
+   Caja valida orden
+        ↓
+   Se realiza pago
+        ↓
+Orden cambia a estado "Confirmada"
+        ↓
+Stock de productos se actualiza
+```
+
+---
+
+## ⚠️ Casos Excepcionales y Decisiones de Diseño
+
+### Caso 1 — Cliente genera orden y no realiza el pago
+
+**Problema:** Un cliente genera una pre-orden pero no se presenta en caja para pagarla.
 
 **Impacto:**
-- Saturación de órdenes pendientes.
-- Dificultad para identificar órdenes reales.
-- Posible alteración temporal del stock disponible.
-- Congestión en la búsqueda en caja.
+- Saturación de órdenes pendientes
+- Dificultad para identificar órdenes reales
+- Posible alteración temporal del stock disponible
+- Congestión en la búsqueda en caja
 
-**Decisión de Diseño / Solución:**
-- Implementar expiración automática de la pre-orden después de 15 minutos si no es confirmada.
-- Al expirar:
-  - La orden cambia a estado "Cancelada".
-  - Se libera cualquier reserva temporal de stock.
-- Mostrar al cliente un temporizador visible indicando el tiempo restante para completar el pago.
+**Solución:**
+- Expiración automática de la pre-orden después de **15 minutos** si no es confirmada
+- Al expirar: la orden cambia a estado `Cancelada` y se libera cualquier reserva temporal de stock
+- Temporizador visible para el cliente indicando el tiempo restante
 
 ---
 
-### Problema: Ataques sobre múltiples órdenes
+### Caso 2 — Generación masiva de órdenes (ataques o uso indebido)
 
-**Impacto:**  
-Aglomeración en base de datos, dificultad para buscar una orden.
-
-**Solución:**  
-Implementaciones de captcha, registro temporal de usuario antes de realizar una pre-orden.
-
----
-
-### Generación masiva de órdenes (ataques o uso indebido)
-
-**Problema:**  
-Un usuario o bot genera múltiples pre-órdenes de forma intencional o automatizada.
+**Problema:** Un usuario o bot genera múltiples pre-órdenes de forma intencional o automatizada.
 
 **Impacto:**
-- Aglomeración en la base de datos.
-- Lentitud en el sistema.
-- Dificultad para buscar órdenes reales en caja.
-- Posible caída del servicio.
+- Aglomeración en la base de datos
+- Lentitud en el sistema
+- Dificultad para buscar órdenes reales en caja
+- Posible caída del servicio
 
-**Decisión de Diseño / Solución:**
-Se implementarán las siguientes medidas de seguridad:
-
-- Captcha antes de confirmar una pre-orden.
-- Registro temporal del usuario (nombre + número telefónico u otro identificador básico).
-- Limitación de generación de órdenes por dispositivo/IP en un periodo determinado.
-- Limpieza automática de órdenes expiradas en segundo plano.
-
-**Estas decisiones permiten:**
-- Mantener el sistema ligero y eficiente.
-- Evitar abuso sin complicar demasiado la experiencia del cliente.
-- Proteger la base de datos.
-- Garantizar rapidez en caja (objetivo principal del producto).
+**Solución:**
+- **Captcha** antes de confirmar una pre-orden
+- **Registro temporal del usuario** (nombre + número telefónico u otro identificador básico)
+- **Limitación de órdenes** por dispositivo/IP en un periodo determinado
+- **Limpieza automática** de órdenes expiradas en segundo plano
 
 ---
 
-## 9. Riesgos Técnicos Iniciales
+## 🛡️ Riesgos Técnicos Iniciales
 
 ### 1️⃣ Lentitud en la búsqueda de órdenes
 
-**Riesgo:**  
-El sistema podría volverse lento al momento de buscar órdenes en caja, especialmente en horarios pico.
-
-**Impacto:**
-- Aumento en el tiempo de atención.
-- Filas más largas.
-- Mala experiencia del cliente.
-- Pérdida del objetivo principal del producto (agilizar procesos).
-
-**Posibles causas:**
-- Falta de indexación en base de datos.
-- Acumulación de órdenes no eliminadas.
-- Consultas mal optimizadas.
-
-**Mitigación inicial:**
-- Indexar el campo de código único de orden.
-- Implementar limpieza automática de órdenes expiradas.
-- Usar búsquedas directas por código en lugar de listados generales.
+| | Detalle |
+|---|---|
+| **Riesgo** | El sistema podría volverse lento al buscar órdenes en caja, especialmente en horarios pico |
+| **Impacto** | Aumento en tiempo de atención, filas más largas, pérdida del objetivo principal |
+| **Causas posibles** | Falta de indexación en BD, acumulación de órdenes no eliminadas, consultas mal optimizadas |
+| **Mitigación** | Indexar campo de código único · Limpieza automática de órdenes expiradas · Búsquedas directas por código |
 
 ---
 
 ### 2️⃣ Mala actualización de disponibilidad de productos
 
-**Riesgo:**  
-El sistema podría no reflejar correctamente cuando un producto está agotado o disponible.
-
-**Impacto:**
-- Clientes generan órdenes con productos no disponibles.
-- Conflictos en caja.
-- Pérdida de confianza en el sistema.
-
-**Posibles causas:**
-- Falta de sincronización entre confirmación de pago y actualización de stock.
-- Errores en lógica de negocio.
-
-**Mitigación inicial:**
-- Actualizar stock únicamente cuando la orden cambia a estado "Confirmada".
-- Implementar validación final en caja antes de confirmar.
-- Manejar operaciones de actualización de stock como transacciones atómicas.
+| | Detalle |
+|---|---|
+| **Riesgo** | El sistema podría no reflejar correctamente cuando un producto está agotado o disponible |
+| **Impacto** | Órdenes con productos no disponibles, conflictos en caja, pérdida de confianza |
+| **Causas posibles** | Falta de sincronización entre confirmación de pago y actualización de stock |
+| **Mitigación** | Actualizar stock solo en estado `Confirmada` · Validación final en caja · Transacciones atómicas |
 
 ---
 
 ### 3️⃣ Duplicación de órdenes
 
-**Riesgo:**  
-Una orden podría generarse más de una vez por errores del sistema o por múltiples clics del usuario.
-
-**Impacto:**
-- Inconsistencia en datos.
-- Cobros duplicados.
-- Confusión operativa.
-
-**Posibles causas:**
-- Falta de control ante múltiples solicitudes simultáneas.
-- Problemas de red que repiten la solicitud.
-- Usuario presiona varias veces el botón de confirmar.
-
-**Mitigación inicial:**
-- Deshabilitar botón de confirmación después del primer clic.
-- Generar códigos únicos irrepetibles.
-- Implementar validaciones de idempotencia en el backend.
-- Uso de transacciones en base de datos.
+| | Detalle |
+|---|---|
+| **Riesgo** | Una orden podría generarse más de una vez por errores del sistema o múltiples clics del usuario |
+| **Impacto** | Inconsistencia en datos, cobros duplicados, confusión operativa |
+| **Causas posibles** | Múltiples solicitudes simultáneas, problemas de red, usuario presiona varias veces confirmar |
+| **Mitigación** | Deshabilitar botón tras primer clic · Códigos únicos irrepetibles · Idempotencia en backend · Transacciones en BD |
 
 ---
 
-## 10. Posibles Expansiones Futuras
+## 🚀 Posibles Expansiones Futuras
 
-- Integración con pagos online.
-- Conexión de inventario con sistema POS (Evita actualizaciones manuales).
-- Estadísticas de ventas.
-- Multiusuario con roles.
+- [ ] Integración con pagos online
+- [ ] Conexión de inventario con sistema POS (evita actualizaciones manuales)
+- [ ] Estadísticas de ventas
+- [ ] Multiusuario con roles
+
+---
+
+> _Proyecto en desarrollo — MVP v1.0_
