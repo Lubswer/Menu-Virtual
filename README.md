@@ -81,7 +81,7 @@ La falta de actualización inmediata del menú y la indecisión en caja generan 
 ---
 
 ## 🔄 Flujo General del Sistema
-<div aling = "center">
+
 ```
 Cliente escanea QR
         ↓
@@ -101,7 +101,7 @@ Orden cambia a estado "Confirmada"
         ↓
 Stock de productos se actualiza
 ```
-<div>
+
 
 ---
 
