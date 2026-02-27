@@ -10,7 +10,7 @@
 - [Usuario Objetivo](#-usuario-objetivo)
 - [Problema Principal](#-problema-principal)
 - [Objetivo del Producto](#-objetivo-del-producto)
-- [Alcance del MVP](#-alcance-del-mvp-versión-inicial)
+- [Alcance del MVP (Producto Mínimo Viable)](#-alcance-del-mvp-versión-inicial)
 - [Exclusiones](#-exclusiones-fuera-del-alcance)
 - [Flujo General del Sistema](#-flujo-general-del-sistema)
 - [Casos Excepcionales y Decisiones de Diseño](#-casos-excepcionales-y-decisiones-de-diseño)
@@ -81,7 +81,7 @@ La falta de actualización inmediata del menú y la indecisión en caja generan 
 ---
 
 ## 🔄 Flujo General del Sistema
-
+<div aling = "center">
 ```
 Cliente escanea QR
         ↓
@@ -101,6 +101,7 @@ Orden cambia a estado "Confirmada"
         ↓
 Stock de productos se actualiza
 ```
+<div>
 
 ---
 
